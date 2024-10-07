@@ -95,13 +95,13 @@ def check_for_new_roles():
         temp_role = old_roles[len(old_roles)-i-1]
         print(temp_role['company_name'], datetime.fromtimestamp(temp_role['date_posted'], timezone.utc))
 
-    # if new_roles:
-    #     print(f"Found {len(new_roles)} new roles.")
-    #     # Send Discord messages for new roles
-    #     for role in new_roles:
-    #         if role['is_visible'] and role['active']:
-    #             embed = format_embed_message(role)
-    #             send_discord_embed(embed)
+    if new_roles:
+        print(f"Found {len(new_roles)} new roles.")
+        # Send Discord messages for new roles
+        for role in new_roles:
+            if role['is_visible'] and role['active']:
+                embed = format_embed_message(role)
+                send_discord_embed(embed)
     else:
         print("No new roles found.")
 
