@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 import discord
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 REPO_URL = 'https://github.com/Ouckah/Summer2025-Internships'
